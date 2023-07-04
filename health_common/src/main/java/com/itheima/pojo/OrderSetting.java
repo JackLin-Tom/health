@@ -7,6 +7,7 @@ import java.util.Date;
  * 预约设置
  */
 public class OrderSetting implements Serializable{
+
     private Integer id ;
     private Date orderDate;//预约设置日期
     private int number;//可预约人数
@@ -51,4 +52,6 @@ public class OrderSetting implements Serializable{
     public void setReservations(int reservations) {
         this.reservations = reservations;
     }
+
+
 }

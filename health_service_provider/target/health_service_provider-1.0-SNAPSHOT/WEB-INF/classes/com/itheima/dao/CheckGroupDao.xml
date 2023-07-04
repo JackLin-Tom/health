@@ -4,6 +4,7 @@
 
 <mapper namespace="com.itheima.dao.CheckGroupDao">
 
+
     <!--新增检查组数据-->
     <insert id="add" parameterType="com.itheima.pojo.CheckItem">
         <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">

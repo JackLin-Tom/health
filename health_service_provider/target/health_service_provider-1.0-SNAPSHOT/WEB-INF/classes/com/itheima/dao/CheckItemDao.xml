@@ -4,26 +4,6 @@
 
 <mapper namespace="com.itheima.dao.CheckItemDao">
 
-    <resultMap type="com.itheima.pojo.CheckGroup" id="baseResultMap">
-        <id column="id" property="id"/>
-        <result column="name" property="name"/>
-        <result column="code" property="code"/>
-        <result column="helpCode" property="helpCode"/>
-        <result column="sex" property="sex"/>
-        <result column="remark" property="remark"/>
-        <result column="attention" property="attention"/>
-    </resultMap>
-
-    <resultMap type="com.itheima.pojo.CheckGroup"
-               id="findByIdResultMap"
-               extends="baseResultMap">
-        <collection property="checkItems"
-                    javaType="ArrayList"
-                    ofType="com.itheima.pojo.CheckItem"
-                    column="id"
-                    select="com.qy.dao.CheckItemDao.findCheckItemById">
-        </collection>
-    </resultMap>
 
     <!--新增-->
     <insert id="add" parameterType="com.itheima.pojo.CheckItem">

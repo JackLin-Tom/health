@@ -30,4 +30,7 @@ public interface CheckGroupDao {
     //查询所有检查组
     List<CheckGroup> findAll();
 
+    CheckGroup findCheckGroupById(Integer id);
+
+
 }

@@ -6,9 +6,7 @@ import com.itheima.entity.PageResult;
 import com.itheima.entity.QueryPageBean;
 import com.itheima.entity.Result;
 import com.itheima.pojo.CheckGroup;
-import com.itheima.pojo.CheckItem;
 import com.itheima.service.CheckGroupService;
-import org.aspectj.bridge.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +24,6 @@ public class CheckGroupController {
     //新增
     @RequestMapping("/add")
     public Result add(@RequestBody CheckGroup checkGroup, Integer[] checkItemIds){
-
         try {
             checkGroupService.add(checkGroup,checkItemIds);
         } catch (Exception e) {
@@ -90,6 +87,14 @@ public class CheckGroupController {
                 return new Result(false, MessageConstant.QUERY_CHECKGROUP_FAIL);
             }
     }
+
+    //删除检查组
+    @RequestMapping("/delete")
+    public Result deleteCheckGroup(){
+        //TODO 删除检查组
+        return null;
+    }
+
 
 
 }
