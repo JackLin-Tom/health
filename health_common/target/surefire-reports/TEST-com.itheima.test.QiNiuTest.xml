@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.itheima.test.QiNiuTest" time="1.517" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.itheima.test.QiNiuTest" time="1.875" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -31,7 +31,7 @@
     <property name="maven.ext.class.path" value="D:\java,software\IDEA\IntelliJ IDEA 2021.3.1\plugins\maven\lib\maven-event-listener.jar"/>
     <property name="classworlds.conf" value="D:\java,software\Maven\apache-maven-3.6.3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="D:\Javajdk\1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Javajdk\1.8\bin;D:\Javajdk\1.8\jre\bin;D:\Git\cmd;D:\java,software\Maven\apache-maven-3.6.3\bin;E:\NVM\nvm;E:\NVM\nvm\nodejs;D:\微信小程序\微信web开发者工具\dll;E:\Xftp_Xshell\Xshell7\;E:\Xftp_Xshell\Xftp7\;C:\Users\JackLin\AppData\Local\Microsoft\WindowsApps;D:\java,software\IDEA\IntelliJ IDEA 2021.3.1\bin;;E:\NVM\nvm;E:\NVM\nvm\nodejs;D:\VScode\Microsoft VS Code\bin;D:\WebStorm\WebStorm 2022.1.4\bin;;."/>
+    <property name="java.library.path" value="D:\Javajdk\1.8\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Javajdk\1.8\bin;D:\Javajdk\1.8\jre\bin;D:\Git\cmd;D:\java,software\Maven\apache-maven-3.6.3\bin;E:\NVM\nvm;E:\NVM\nvm\nodejs;D:\微信小程序\微信web开发者工具\dll;E:\Xftp_Xshell\Xshell7\;E:\Xftp_Xshell\Xftp7\;%GRADLE_HOME%\bin;C:\Users\JackLin\AppData\Local\Microsoft\WindowsApps;D:\java,software\IDEA\IntelliJ IDEA 2021.3.1\bin;;E:\NVM\nvm;E:\NVM\nvm\nodejs;D:\VScode\Microsoft VS Code\bin;D:\WebStorm\WebStorm 2022.1.4\bin;;."/>
     <property name="maven.conf" value="D:\java,software\Maven\apache-maven-3.6.3/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -64,6 +64,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.itheima.test.QiNiuTest" name="addTest" time="0.993"/>
-  <testcase classname="com.itheima.test.QiNiuTest" name="deleteTest" time="0.524"/>
+  <testcase classname="com.itheima.test.QiNiuTest" name="addTest" time="1.345"/>
+  <testcase classname="com.itheima.test.QiNiuTest" name="deleteTest" time="0.53"/>
 </testsuite>

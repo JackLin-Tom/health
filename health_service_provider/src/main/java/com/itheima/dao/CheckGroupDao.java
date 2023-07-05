@@ -13,7 +13,7 @@ public interface CheckGroupDao {
     void add(CheckGroup checkGroup);
 
     // 插入检查组与检查项多对多关联
-    void setCheckGroupAndCheckItem(Map<String, Integer> map);
+    void setCheckGroupAndCheckItem(Map map);
 
     Page<CheckGroup> selectByCondition(String queryString);
 

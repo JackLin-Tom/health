@@ -13,48 +13,48 @@ import java.io.FileOutputStream;
 
 public class POITest {
 
-    // 使用POI读取Excel文件中的数据
-    @Test
-    public void test1() throws Exception{
+//    // 使用POI读取Excel文件中的数据
+//    @Test
+//    public void test1() throws Exception{
+//
+//        // 加载指定文件，创建一个Excel对象(工作簿)
+//        XSSFWorkbook excel = new XSSFWorkbook(new FileInputStream(new File("D:\\poi.xlsx")));
+//        // 读取Excel文件中第一个sheet标签页
+//        XSSFSheet sheet = excel.getSheetAt(0);
+//        // 遍历Sheet标签页，获取每一行数据
+//        for (Row row : sheet){
+//            // 遍历行，获取每个单元格对象
+//            for (Cell cell : row){
+//                System.out.println(cell.getStringCellValue());
+//            }
+//        }
+//        // 关闭资源
+//        excel.close();
+//    }
 
-        // 加载指定文件，创建一个Excel对象(工作簿)
-        XSSFWorkbook excel = new XSSFWorkbook(new FileInputStream(new File("D:\\poi.xlsx")));
-        // 读取Excel文件中第一个sheet标签页
-        XSSFSheet sheet = excel.getSheetAt(0);
-        // 遍历Sheet标签页，获取每一行数据
-        for (Row row : sheet){
-            // 遍历行，获取每个单元格对象
-            for (Cell cell : row){
-                System.out.println(cell.getStringCellValue());
-            }
-        }
-        // 关闭资源
-        excel.close();
-    }
-
-    // 使用POI读取Excel文件中的数据
-    @Test
-    public void test2() throws Exception{
-
-        // 加载指定文件，创建一个Excel对象(工作簿)
-        XSSFWorkbook excel = new XSSFWorkbook(new FileInputStream(new File("D:\\poi.xlsx")));
-        // 读取Excel文件中第一个sheet标签页
-        XSSFSheet sheet = excel.getSheetAt(0);
-        // 获取当前工作表中最后一个行号，需要主要：行号从0开始
-        int lastRowNum = sheet.getLastRowNum();
-        for(int i=0;i<=lastRowNum;i++){
-            //根据行号获取行对象
-            XSSFRow row = sheet.getRow(i);
-            // 获得当前行最后一个单元格索引
-            short lastCellNum = row.getLastCellNum();
-            for(short j=0;j<lastCellNum;j++){
-                String value = row.getCell(j).getStringCellValue();
-                System.out.println(value);
-            }
-        }
-        // 关闭资源
-        excel.close();
-    }
+//    // 使用POI读取Excel文件中的数据
+//    @Test
+//    public void test2() throws Exception{
+//
+//        // 加载指定文件，创建一个Excel对象(工作簿)
+//        XSSFWorkbook excel = new XSSFWorkbook(new FileInputStream(new File("D:\\poi.xlsx")));
+//        // 读取Excel文件中第一个sheet标签页
+//        XSSFSheet sheet = excel.getSheetAt(0);
+//        // 获取当前工作表中最后一个行号，需要主要：行号从0开始
+//        int lastRowNum = sheet.getLastRowNum();
+//        for(int i=0;i<=lastRowNum;i++){
+//            //根据行号获取行对象
+//            XSSFRow row = sheet.getRow(i);
+//            // 获得当前行最后一个单元格索引
+//            short lastCellNum = row.getLastCellNum();
+//            for(short j=0;j<lastCellNum;j++){
+//                String value = row.getCell(j).getStringCellValue();
+//                System.out.println(value);
+//            }
+//        }
+//        // 关闭资源
+//        excel.close();
+//    }
 
     // 使用POI创建和修改Excel文件中的数据
     @Test

@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
-@Service
+@Service(interfaceClass = OrderSettingService.class)
 @Transactional
 public class OrderSettingServiceImpl implements OrderSettingService {
 

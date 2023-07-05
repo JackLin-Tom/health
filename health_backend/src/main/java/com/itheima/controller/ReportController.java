@@ -34,7 +34,7 @@ public class ReportController {
     private MemberService memberService;
 
     @Reference
-    private SetMealService setMealService;
+    private SetMealService setmealService;
 
     @Reference
     private ReportService reportService;
@@ -71,7 +71,7 @@ public class ReportController {
      */
     @RequestMapping("/getSetmealReport")
     public Result getSetmealReport(){
-        List<Map<String, Object>> list = setMealService.findSetMealCount();
+        List<Map<String, Object>> list = setmealService.findSetMealCount();
 
         Map<String,Object> map = new HashMap<String,Object>();
         map.put("setmealCount",list);

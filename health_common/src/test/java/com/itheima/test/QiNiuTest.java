@@ -27,7 +27,7 @@ public class QiNiuTest {
         String secretKey = QiniuUtils.secretKey;
         String bucket = QiniuUtils.bucket;
 //如果是Windows情况下，格式是 D:\\qiniu\\test.png
-        String localFilePath = "F:\\SSM\\黑马医疗项目\\黑马医疗项目\\资源\\图片资源\\ac3b5a4d-33a5-4f37-bd49-99e06ce17d202.jpg";
+        String localFilePath = "F:\\SSM\\黑马医疗项目\\day04\\资源\\图片资源\\3bd90d2c-4e82-42a1-a401-882c88b06a1a2.jpg";
 //默认不指定key的情况下，以文件内容的hash值作为文件名
         String key = "ab.jpg";
         Auth auth = Auth.create(accessKey, secretKey);

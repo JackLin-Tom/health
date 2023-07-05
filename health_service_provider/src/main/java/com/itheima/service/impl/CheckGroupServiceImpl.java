@@ -24,11 +24,12 @@ public class CheckGroupServiceImpl implements CheckGroupService {
     CheckGroupDao checkGroupDao;
 
     @Override
-    public void add(CheckGroup checkGroup, Integer[] checkItemIds) {
+    public void add(CheckGroup checkGroup, Integer[] checkitemIds) {
         // 新增检查组，操作t_checkgroup表
         checkGroupDao.add(checkGroup);
+        System.out.println(checkGroup.getId());
         // 设置检查组和检查项的多对多的关联关系，操作t_checkgroup_checkitem表
-        setCheckGroupAndCheckItem(checkGroup.getId(),checkItemIds);
+        setCheckGroupAndCheckItem(checkGroup.getId(),checkitemIds);
     }
 
     @Override
@@ -80,9 +81,9 @@ public class CheckGroupServiceImpl implements CheckGroupService {
     }
 
 
-    public void setCheckGroupAndCheckItem(Integer checkGroupId, Integer[] checkItemIds){
-        if(checkGroupId != null && checkItemIds.length > 0){
-            for(Integer checkItemId : checkItemIds){
+    public void setCheckGroupAndCheckItem(Integer checkGroupId, Integer[] checkitemIds){
+        if(checkGroupId != null && checkitemIds.length > 0){
+            for(Integer checkItemId : checkitemIds){
                 Map<String,Integer> map = new HashMap<>();
                 map.put("checkgroup_id",checkGroupId);
                 map.put("checkitem_id",checkItemId);

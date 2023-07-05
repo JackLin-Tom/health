@@ -10,7 +10,7 @@ import java.util.List;
 public interface CheckGroupService {
 
     //新增检查组
-    void add(CheckGroup checkGroup, Integer[] checkItemIds);
+    void add(CheckGroup checkGroup, Integer[] checkitemIds);
 
     //分页
     PageResult pageQuery(QueryPageBean queryPageBean);

@@ -1,5 +1,6 @@
 package com.itheima.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.itheima.constant.MessageConstant;
 import com.itheima.dao.MemberDao;
 import com.itheima.dao.OrderDao;
@@ -11,11 +12,17 @@ import com.itheima.pojo.OrderSetting;
 import com.itheima.service.OrderService;
 import com.itheima.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 体检预约服务
+ */
+@Service(interfaceClass = OrderService.class)
+@Transactional
 public class OrderServiceImpl implements OrderService {
 
 

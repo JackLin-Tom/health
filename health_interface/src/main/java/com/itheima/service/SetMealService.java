@@ -1,20 +1,17 @@
 package com.itheima.service;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.itheima.entity.PageResult;
 import com.itheima.entity.QueryPageBean;
 import com.itheima.pojo.Setmeal;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 import java.util.Map;
 
-@Service(interfaceClass = SetMealService.class)
-@Transactional
+
 public interface SetMealService {
 
-    void add(Setmeal setmeal, Integer[] checkGroupIds);
+    void add(Setmeal setmeal, Integer[] checkgroupIds);
 
+    //分页查询
     PageResult pageQuery(QueryPageBean queryPageBean);
 
     List<Setmeal> findAll();

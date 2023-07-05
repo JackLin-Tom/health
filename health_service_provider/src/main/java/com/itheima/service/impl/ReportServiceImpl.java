@@ -1,15 +1,22 @@
 package com.itheima.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.itheima.dao.MemberDao;
 import com.itheima.dao.OrderDao;
 import com.itheima.service.ReportService;
 import com.itheima.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 运营数据统计服务
+ */
+@Service(interfaceClass = ReportService.class)
+@Transactional
 public class ReportServiceImpl implements ReportService {
 
     @Autowired

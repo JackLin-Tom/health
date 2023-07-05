@@ -10,6 +10,7 @@ import com.itheima.pojo.CheckItem;
 import com.itheima.service.CheckItemService;
 import org.aspectj.bridge.Message;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +34,7 @@ public class CheckItemController {
     @RequestMapping("/add")
     public Result add(@RequestBody CheckItem checkItem){
         try {
+            //TODO 优化检查项添加是否自增，重复ID，名字
             checkItemService.add(checkItem);
         }catch (Exception e){
             return new Result(false,MessageConstant.ADD_CHECKITEM_FAIL);
@@ -40,9 +42,10 @@ public class CheckItemController {
         return new Result(true,MessageConstant.ADD_CHECKITEM_SUCCESS);
     }
 
-    //查询检查项
+    //查询检查项（分页）
     @PostMapping("/findPage")
     public PageResult findPage(@RequestBody QueryPageBean queryPageBean){
+        //TODO 优化查询
         PageResult pageResult = checkItemService.pageQuery(queryPageBean);
         return pageResult;
     }

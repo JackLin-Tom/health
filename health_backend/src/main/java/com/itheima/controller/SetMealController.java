@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.itheima.constant.MessageConstant;
 import com.itheima.constant.RedisConstant;
 import com.itheima.entity.PageResult;
@@ -8,7 +9,6 @@ import com.itheima.entity.Result;
 import com.itheima.pojo.Setmeal;
 import com.itheima.service.SetMealService;
 import com.itheima.utils.QiniuUtils;
-import jdk.nashorn.internal.ir.annotations.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +28,7 @@ public class SetMealController {
 
     // 使用JedisPool操作redis服务
     @Autowired
-    private JedisPool jedisPool;
+    JedisPool jedisPool;
 
     //上传图片
     @RequestMapping("/upload")
@@ -54,17 +54,18 @@ public class SetMealController {
         }
     }
 
-    //添加套餐
+
+    //新增套餐
     @RequestMapping("/add")
-    public Result add(@RequestBody Setmeal setmeal, Integer[] checkGroupIds){
-        //添加基本信息,和相关的检擦组
+    public Result add(@RequestBody Setmeal setmeal, Integer[] checkgroupIds){
         try {
-            setMealService.add(setmeal,checkGroupIds);
-            return new Result(true,MessageConstant.ADD_SETMEAL_SUCCESS);
-        } catch (Exception e) {
-            e.printStackTrace();
+            setMealService.add(setmeal,checkgroupIds);
+        }catch (Exception e){
+            //新增套餐失败
             return new Result(false,MessageConstant.ADD_SETMEAL_FAIL);
         }
+        //新增套餐成功
+        return new Result(true,MessageConstant.ADD_SETMEAL_SUCCESS);
     }
 
     //分页查询
@@ -72,7 +73,6 @@ public class SetMealController {
     public PageResult findPage(@RequestBody QueryPageBean queryPageBean){
         return setMealService.pageQuery(queryPageBean);
     }
-
 
 
 }

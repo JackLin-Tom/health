@@ -23,9 +23,9 @@ public class CheckGroupController {
 
     //新增
     @RequestMapping("/add")
-    public Result add(@RequestBody CheckGroup checkGroup, Integer[] checkItemIds){
+    public Result add(@RequestBody CheckGroup checkGroup, Integer[] checkitemIds){
         try {
-            checkGroupService.add(checkGroup,checkItemIds);
+            checkGroupService.add(checkGroup,checkitemIds);
         } catch (Exception e) {
             e.printStackTrace();
             return new Result(false, MessageConstant.ADD_CHECKGROUP_FAIL);
