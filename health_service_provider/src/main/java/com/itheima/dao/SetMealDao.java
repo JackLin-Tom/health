@@ -23,4 +23,8 @@ public interface SetMealDao {
     List<Map<String, Object>> findSetMealCount();
 
 
+    void deleteById(Integer id);
+
+    void deleteSetMealAndCheckGroup(Integer id);
+
 }

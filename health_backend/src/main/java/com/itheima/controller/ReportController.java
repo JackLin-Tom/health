@@ -7,6 +7,7 @@ import com.itheima.service.MemberService;
 import com.itheima.service.ReportService;
 import com.itheima.service.SetMealService;
 import net.sf.jasperreports.engine.JasperCompileManager;
+
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -14,8 +15,8 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -26,18 +27,18 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@Controller
+@RestController
 @RequestMapping("/report")
 public class ReportController {
 
     @Reference
-    private MemberService memberService;
+    MemberService memberService;
 
     @Reference
-    private SetMealService setmealService;
+    SetMealService setmealService;
 
     @Reference
-    private ReportService reportService;
+    ReportService reportService;
 
     /**
      * 会员数量统计
@@ -159,7 +160,7 @@ public class ReportController {
             row.getCell(7).setCellValue(thisMonthVisitsNumber);//本月到诊数
 
             int rowNum = 12;
-            for(Map map : hotSetmeal){//热门套餐
+            for(Map map : hotSetmeal){     //热门套餐
                 String name = (String) map.get("name");
                 Long setmeal_count = (Long) map.get("setmeal_count");
                 BigDecimal proportion = (BigDecimal) map.get("proportion");

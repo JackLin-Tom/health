@@ -96,7 +96,7 @@
                         <el-table-column label="操作" align="center">
                             <template slot-scope="scope">
                                 <el-button type="primary" size="mini">编辑</el-button>
-                                <el-button size="mini" type="danger">删除</el-button>
+                                <el-button size="mini" type="danger" @click="handleDelete(scope.row)">删除</el-button>
                             </template>
                         </el-table-column>
                     </el-table>
@@ -249,6 +249,7 @@
             created() {
                 this.findPage();
             },
+
             methods: {
                 //文件上传成功后的钩子，response为服务端返回的值，file为当前上传的文件封装成的js对象
                 handleAvatarSuccess(response, file) {
@@ -329,7 +330,42 @@
                     //currentPage为切换后的页码
                     this.pagination.currentPage = currentPage;
                     this.findPage();
+                },
+
+                // 删除
+                handleDelete(row) {
+                    this.$confirm('此操作将永久当前数据，是否继续?', '提示', {
+                        type: 'warning'
+                    }).then(()=>{
+                        //点击确定按钮执行此代码
+                        axios.get("/setmeal/delete.do?id=" + row.id).then((res)=> {
+                            if(!res.data.flag){
+                                //删除失败
+                                this.$message.error(res.data.message);
+                            }else{
+                                //删除成功
+                                this.$message({
+                                    message: res.data.message,
+                                    type: 'success'
+                                });
+                                this.findPage();
+                            }
+                        }).catch((r)=>{
+                            if (r == 'Error: Request failed with status code 403'){
+                                // 权限不足
+                                this.$message.error('无访问权限');
+                                return;
+                            }else {
+                                this.$message.error('未知错误');
+                                return;
+                            }
+                        });
+                    }).catch(()=> {
+                        //点击取消按钮执行此代码
+                        this.$message('操作已取消');
+                    });
                 }
+
             }
         })
     </script>

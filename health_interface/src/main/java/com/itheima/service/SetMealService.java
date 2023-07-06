@@ -22,4 +22,6 @@ public interface SetMealService {
     List<Map<String, Object>> findSetMealCount();
 
 
+    void deleteById(Integer id);
+
 }

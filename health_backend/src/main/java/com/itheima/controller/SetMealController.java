@@ -74,5 +74,21 @@ public class SetMealController {
         return setMealService.pageQuery(queryPageBean);
     }
 
+    //删除套餐
+    @RequestMapping("/delete")
+    public Result deleteById(Integer id){
+        try {
+            setMealService.deleteById(id);
+            return new Result(true,MessageConstant.DELETE_SETMEAL_SUCCESS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result(true,MessageConstant.DELETE_SETMEAL_FAIL);
+        }
+    }
+
+
+
+
+
 
 }

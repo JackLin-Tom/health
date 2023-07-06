@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.itheima.test.QiNiuTest" time="1.875" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.itheima.test.QiNiuTest" time="4.932" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -64,6 +64,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.itheima.test.QiNiuTest" name="addTest" time="1.345"/>
-  <testcase classname="com.itheima.test.QiNiuTest" name="deleteTest" time="0.53"/>
+  <testcase classname="com.itheima.test.QiNiuTest" name="addTest" time="4.501"/>
+  <testcase classname="com.itheima.test.QiNiuTest" name="deleteTest" time="0.431"/>
 </testsuite>

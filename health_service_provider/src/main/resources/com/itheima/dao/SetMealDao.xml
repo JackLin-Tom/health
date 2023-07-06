@@ -78,6 +78,19 @@
         where id = #{id}
     </select>
 
+    <!--   根据Id删除套餐-->
+    <delete id="deleteById">
+        DELETE
+        FROM t_setmeal
+        WHERE id = #{id};
+    </delete>
+
+    <!--    删除关联关系-->
+    <delete id="deleteSetMealAndCheckGroup">
+        DELETE
+        FROM t_setmeal_checkgroup
+        WHERE setmeal_id = #{id};
+    </delete>
 
 
 </mapper>

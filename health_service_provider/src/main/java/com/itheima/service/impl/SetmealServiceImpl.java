@@ -92,6 +92,17 @@ public class SetmealServiceImpl implements SetMealService {
         return setMealDao.findSetMealCount();
     }
 
+    @Override
+    public void deleteById(Integer id) {
+
+        //删除关联关系
+        setMealDao.deleteSetMealAndCheckGroup(id);
+
+        //删除表
+        setMealDao.deleteById(id);
+
+    }
+
     //绑定套餐和检查组的多对多关系
     private void setSetMealAndCheckGroup(Integer id, Integer[] checkgroupIds) {
         for (Integer checkgroupId : checkgroupIds) {

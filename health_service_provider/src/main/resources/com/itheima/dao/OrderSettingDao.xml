@@ -16,7 +16,7 @@
     <update id="editNumberByOrderDate" parameterType="com.itheima.pojo.OrderSetting">
         update t_ordersetting
         set number = #{number}
-        where orderDate = #{orderDate}
+        where orderDate = #{orderDate,jdbcType=DATE}
     </update>
 
     <!--更新已预约人数-->
@@ -27,10 +27,10 @@
     </update>
 
     <!-- 根据预约日期查询 Date类型比较加上jdbcType=DATE转换为('yyyy-MM-dd') 默认是timestamp('yyyy-MM-dd HH:mm:ss' ) -->
-    <select id="findCountByOrderDate" parameterType="java.util.Date" resultType="long">
+    <select id="findCountByOrderDate" parameterType="date" resultType="long">
         select count(*)
         from t_ordersetting
-        where orderDate = #{orderDate}
+        where orderDate = #{orderDate,jdbcType=DATE}
     </select>
 
     <!--根据月份查询预约设置信息-->
