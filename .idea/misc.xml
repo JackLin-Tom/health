@@ -4,9 +4,13 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/health_backend" />
     <file type="web" url="file://$PROJECT_DIR$/health_jobs" />
+    <file type="web" url="file://$PROJECT_DIR$/health_mob" />
+    <file type="web" url="file://$PROJECT_DIR$/health_mob" />
     <file type="web" url="file://$PROJECT_DIR$/health_mobile" />
+    <file type="web" url="file://$PROJECT_DIR$/health_phone" />
     <file type="web" url="file://$PROJECT_DIR$/health_service_provider" />
     <file type="web" url="file://$PROJECT_DIR$/springsecuritydemo" />
+    <file type="web" url="file://$PROJECT_DIR$/testEmail" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -15,6 +19,12 @@
         <option value="$PROJECT_DIR$/quartzdemo/pom.xml" />
         <option value="$PROJECT_DIR$/springsecuritydemo/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/health_mobile/pom.xml" />
+        <option value="$PROJECT_DIR$/health_phone/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">

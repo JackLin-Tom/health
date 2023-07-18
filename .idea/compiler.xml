@@ -11,10 +11,15 @@
         <module name="health_service_provider" />
         <module name="health_backend" />
         <module name="quartzdemo" />
+        <module name="health_mob" />
         <module name="health_common" />
-        <module name="health_mobile" />
         <module name="health_jobs" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="health_mobile" target="1.8" />
+      <module name="health_phone" target="1.8" />
+      <module name="testEmail" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
