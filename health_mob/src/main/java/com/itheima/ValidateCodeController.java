@@ -124,10 +124,6 @@ public class ValidateCodeController {
         }
     }
 
-    @RequestMapping("/lin")
-    public Result lin() {
-            return new Result(true, MessageConstant.SEND_VALIDATECODE_SUCCESS);
-    }
 
 
 
